@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{gensymb}
+\usepackage{hyperref}
+
+
+\lstset{ %
+  language=R,                     % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}            % if you want to add more keywords to the set
+} 
+
+\newcommand{\mymeter}[2] 
+{  % #1 = name , #2 = rotation angle
+\begin{scope}[transform shape,rotate=#2]
+\draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+
+\end{scope}
+}
+
+
+\newcommand{\newmymeter}[2] 
+{  % #1 = name , #2 = rotation angle
+\begin{scope}[transform shape,rotate=#2]
+\draw[thick] (#1)node(){$\mathbf A$} circle (11pt);
+
+\end{scope}
+}
+
+
+
+\begin{document}
+\begin{titlepage}
+
+
+\title{%
+Sprawozdanie z ćwiczenia laboratoryjnego nr 3.\\
+\large  Wyznaczanie $\frac{c_p}{c_v}$ dla powietrza metodą rezonansu akustycznego. Pomiar prędkości dźwięku w powietrzu.}
+
+\author{Piotr Bródka, Ivan Rukhavets, Aliaksandr Sharapa}
+
+
+\maketitle
+\end{titlepage}
+
+\section{Wstęp}
+Celem zadania jest wyznaczanie stosunku $c_p$ - ciepła właściwego pod stałym ciśnieniem do $c_v$ - ciepła właściwego w stałej obiętości dla powietrza. Stosunek ten oznaczamy w termodynamice przez $\kappa$ i nazywamy stałą adiabaty.
+Drugim celem doświadczenia jest też
+
+
+\section{Wyznaczanie $\frac{c_p}{c_v}$ dla powietrza metodą rezonansu akustycznego.} 
+
+\subsection{Wstęp teoretyczny}
+
+\subsection{Pomiary}
+Dokonaliśmy 9 pomiarów dla różnych częstotliwości
+
+\subsubsection{Pomiar 1}
+$$
+T = 2.4*0.1ms \hspace{1cm} \Delta T = 0.2*0.1ms \hspace{1cm} \Delta T_e = 0.1*0.1ms 
+$$
+$$
+f_0 = 4023Hz \hspace{1cm} f=4167Hz
+$$
+(4.8, 9.0, 13.3, 17.5, 21.8, 26.0, 30.3, 34.5, 38.8, 43.0, 47.3)
+
+4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3
+
+4.25
+\subsubsection{Pomiar 2}
+$$
+T = 4.4*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+$$
+$$
+f_0 = 4503 Hz \hspace{1cm} f=4545Hz
+$$
+(0.3, 4.1, 8.0, 11.8, 15.6, 19.5, 23.3, 27.1, 31.0, 34.8, 38.6, 42.5, 46.3)
+
+3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8
+
+3.833333
+\subsubsection{Pomiar 3}
+$$
+T = 4.0*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+$$
+$$
+f_0 = 4990 Hz \hspace{1cm} f=5000Hz
+$$
+(2.6, 6.0, 9.6, 13.0, 16.4, 19.8, 23.3, 26.7, 30.2, 33.6, 37.1, 40.6, 44.0, 47.5)
+
+3.4 3.6 3.4 3.4 3.4 3.5 3.4 3.5 3.4 3.5 3.5 3.4 3.5
+
+3.453846
+\subsubsection{Pomiar 4}
+$$
+T = 3.6*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+$$
+$$
+f_0 = 5497 Hz \hspace{1cm} f=5556Hz
+$$
+(3.0, 6.1, 9.2, 12.4, 15.5, 18.7, 21.9, 25.0, 28.1, 31.3, 34.4, 37.6, 40.8, 43.9, 47.1)
+
+3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.2
+
+3.15
+\subsubsection{Pomiar 5}
+$$
+T = 3.4*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.2ms 
+$$
+$$
+f_0 = 5986 Hz \hspace{1cm} f=5952Hz
+$$
+(2.3, 5.2, 8.1, 11.0, 13.9, 16.8, 19.7, 22.6, 25.5, 28.4, 31.3, 34.2, 37.1, 40.0, 42.9, 45.8, 48.7) 
+
+.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9
+
+2.9
+\subsubsection{Pomiar 6}
+$$
+T = 7.8*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.2ms 
+$$
+$$
+f_0 = 6502 Hz \hspace{1cm} f=6410Hz
+$$
+(1.4, 4.0, 6.7, 9.4, 12.1, 14.7, 17.4, 20.0, 22.7, 25.4, 28.0, 30.7, 33.4, 36.0, 38.7, 41.3, 44.0, 46.7, 49.4)
+
+2.6 2.7 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.6 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.7
+
+2.666667
+\subsubsection{Pomiar 7}
+$$
+T = 7.0*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
+$$
+$$
+f_0 = 6995 Hz \hspace{1cm} f=7143Hz
+$$
+(0.6, 3.2, 5.6, 8.0, 10.5, 13.0, 15.5, 18.0, 20.5, 22.9, 25.4, 27.9, 30.4, 32.8, 35.3, 37.8, 40.3, 42.7, 45.2, 47.7)
+
+2.6 2.4 2.4 2.5 2.5 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5
+
+2.478947
+\subsubsection{Pomiar 8}
+$$
+T = 6.6*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
+$$
+$$
+f_0 = 7504 Hz \hspace{1cm} f=7576Hz
+$$
+(2.1, 4.4, 6.8, 9.1, 11.4, 13.7, 16.0, 18.3, 20.6, 22.9, 25.2, 27.6, 29.8, 32.2, 34.5, 36.8, 39.1, 41.4, 43.7, 46.0, 48.3)
+
+2.3 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.4 2.2 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3
+
+2.31
+\subsubsection{Pomiar 9}
+$$
+T = 6.2*0.02ms \hspace{1cm} \Delta T = 0.2*0.2ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
+$$
+$$
+f_0 = 7988Hz \hspace{1cm} f=8065Hz
+$$
+(1.0, 3.2, 5.3, 7.6, 9.8, 11.9, 14.1, 16.3, 18.4, 20.6, 22.8, 25.0, 27.2, 29.3, 31.4, 33.6, 35.1, 37.9, 40.1, 42.3, 44.5, 46.6, 48.8)
+
+2.2 2.1 2.3 2.2 2.1 2.2 2.2 2.1 2.2 2.2 2.2 2.2 2.1 2.1 2.2 1.5 2.8 2.2 2.2 2.2 2.1 2.2
+
+
+2.172727
+\section{Pomiar prędkości dźwięku w powietrzu.}
+
+\end{document}
