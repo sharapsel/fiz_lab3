@@ -75,15 +75,81 @@ Sprawozdanie z ćwiczenia laboratoryjnego nr 3.\\
 
 \section{Wstęp}
 Celem zadania jest wyznaczanie stosunku $c_p$ - ciepła właściwego pod stałym ciśnieniem do $c_v$ - ciepła właściwego w stałej obiętości dla powietrza. Stosunek ten oznaczamy w termodynamice przez $\kappa$ i nazywamy stałą adiabaty.
-Drugim celem doświadczenia jest też
+Drugim celem doświadczenia jest też wyznaczenie prędkości rozchodzenia się dźwięku w powietrzu.
 
 
 \section{Wyznaczanie $\frac{c_p}{c_v}$ dla powietrza metodą rezonansu akustycznego.} 
 
 \subsection{Wstęp teoretyczny}
+Przyjęta konwencja jednostek:
+$$
+v - prędkość
+$$
+$$
+\rho - gęstość
+$$
+$$
+T - okres
+$$
+$$
+f - częstotliwość
+$$
+$$
+\bar{T} - temperatura
+$$
+$$
+k - stała Boltzmana
+$$
+
+
+
+Są dwie popularne metody wyznaczania $\kappa$:
+\begin{enumerate}
+\item Clementa-Desormesa, oparta na przeprowadzeniu dwóch przemian gazu: adiabatycznej, a następnie izochorycznej \item Laplace'a, która bazuje na własnościach fal dźwiękowych. 
+\end{enumerate} 
+
+To doświadczenie dotyczy drugiej metody. Przedstawimy fakty, które pomogą zrozumieć to doświadczenie.
+
+
+Fala dźwiękowa jest falą mechaniczną, więc potrzebuje do rozchodzenia się ośrodka (którego cząsteczek drgania są właśnie tą falą).  
+
+W naszym przypadku źródłem tej fali (źródłem drgań) będzie głośnik, a bardziej precyzyjnie - drgania membrany głośnika. 
+
+Fala dźwiękowa jest falą podłużną. Rozchodzi się w powietrzu. Drgania cząsteczek powietrza (naszego ośrodka) objawiają się miejscowym nierównościami ilości cząsteczek na jednostkę objętości, co znaczy: miejscowymi nierównościami ciśnienia.
+Możemy przyjąć, że fala dźwiękowa rozchodzi się na tyle szybko, że te zmiany ciśnienia realizowane są w ramach przemiany adiabatycznej gazu (układ nie wymiania ciepła z otoczeniem), czyli spełnione jest: 
+
+$$
+pV^\kappa = const.
+$$
+
+
+Ostatecznie:
+$$
+\kappa = \frac{c_p}{c_v} = \frac{\lambda^2 f^2 M}{k\bar{T}}
+$$
+lub
+$$
+\kappa = \frac{c_p}{c_v} = \frac{\lambda^2 M}{k T^2 \bar{T}}
+$$
+
 
 \subsection{Pomiary}
-Dokonaliśmy 9 pomiarów dla różnych częstotliwości
+Dokonaliśmy 9 pomiarów dla różnych częstotliwości. Na generatorze ustawialiśmy częstotliwość $f_0$. Generator nie jest jednak dokładny i żeby uzyskać dane do dalszych obliczeń - trzeba było zrobić coś innego. Na oscyloskopie zmierzyliśmy czas jednego pełnego okresu i stąd dostaliśmy prawdziwą częstotliwość. Częstotliwość na generatorze $f_0$ nie ma funkcji inne niż pokazanie, że wartość na generatorze jest obarczona dużym błędem. 
+
+Jest 9 pomiarów dla różnych częstotliwości, rozłożonych w przybliżeniu równomiernie od około 4kHz do około 8kHz. 
+Dla każdego z tych pomiarów wyznaczaliśmy wektor (oznaczmy go $w$) kolejnych punktów na linijce, gdy obserwujemy na oscyloskopie rezonans mechaniczny. Taki rezonans występuje co odległość $\frac{1}{2}\lambda$ (połowa długości fali). 
+
+Następnie za pomocą odejmowania $w_{i+1}-w_i$  dostajemy wektor (odnaczmy go $d$) długości połówek fali (w centymetrach). 
+
+Liczymy średnią arymetryczną 
+
+W pomiarze niepewności długości fali mamy błędy:
+\begin{enumerate}
+\item  typu A: odchylenie standardowe średniej, niepewność średniej $\frac{s_d}{\sqrt{|d|}}$, gdzie $s_d$ to odchylenie standardowe wektora d, a $|d|$ to jego liczność. 
+\item typu B: związana z niedokładnościami sprzętu pomiarowego. $$u_b = \sqrt{\frac{(\delta x)^2}{3} + \frac{(\delta x_E)^2}{3}}$$
+U nas niepewność wzorcowania to długość jednej podziałki, czyli $0.1 cm$, a niepewność eksperymentatora to pół długości jednej podziałki, czyli $0.05 cm$.
+Zatem: $u_b = $
+\end{enumerate} 
 
 \subsubsection{Pomiar 1}
 $$
@@ -92,9 +158,9 @@ $$
 $$
 f_0 = 4023Hz \hspace{1cm} f=4167Hz
 $$
-(4.8, 9.0, 13.3, 17.5, 21.8, 26.0, 30.3, 34.5, 38.8, 43.0, 47.3)
+w: 4.8, 9.0, 13.3, 17.5, 21.8, 26.0, 30.3, 34.5, 38.8, 43.0, 47.3
 
-4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3
+d: 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3
 
 4.25
 \subsubsection{Pomiar 2}
@@ -104,9 +170,9 @@ $$
 $$
 f_0 = 4503 Hz \hspace{1cm} f=4545Hz
 $$
-(0.3, 4.1, 8.0, 11.8, 15.6, 19.5, 23.3, 27.1, 31.0, 34.8, 38.6, 42.5, 46.3)
+w: 0.3, 4.1, 8.0, 11.8, 15.6, 19.5, 23.3, 27.1, 31.0, 34.8, 38.6, 42.5, 46.3
 
-3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8
+d: 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8
 
 3.833333
 \subsubsection{Pomiar 3}
@@ -116,9 +182,9 @@ $$
 $$
 f_0 = 4990 Hz \hspace{1cm} f=5000Hz
 $$
-(2.6, 6.0, 9.6, 13.0, 16.4, 19.8, 23.3, 26.7, 30.2, 33.6, 37.1, 40.6, 44.0, 47.5)
+w: 2.6, 6.0, 9.6, 13.0, 16.4, 19.8, 23.3, 26.7, 30.2, 33.6, 37.1, 40.6, 44.0, 47.5
 
-3.4 3.6 3.4 3.4 3.4 3.5 3.4 3.5 3.4 3.5 3.5 3.4 3.5
+d: 3.4 3.6 3.4 3.4 3.4 3.5 3.4 3.5 3.4 3.5 3.5 3.4 3.5
 
 3.453846
 \subsubsection{Pomiar 4}
@@ -128,9 +194,9 @@ $$
 $$
 f_0 = 5497 Hz \hspace{1cm} f=5556Hz
 $$
-(3.0, 6.1, 9.2, 12.4, 15.5, 18.7, 21.9, 25.0, 28.1, 31.3, 34.4, 37.6, 40.8, 43.9, 47.1)
+w: 3.0, 6.1, 9.2, 12.4, 15.5, 18.7, 21.9, 25.0, 28.1, 31.3, 34.4, 37.6, 40.8, 43.9, 47.1
 
-3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.2
+d: 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.2
 
 3.15
 \subsubsection{Pomiar 5}
@@ -140,9 +206,9 @@ $$
 $$
 f_0 = 5986 Hz \hspace{1cm} f=5952Hz
 $$
-(2.3, 5.2, 8.1, 11.0, 13.9, 16.8, 19.7, 22.6, 25.5, 28.4, 31.3, 34.2, 37.1, 40.0, 42.9, 45.8, 48.7) 
+w: 2.3, 5.2, 8.1, 11.0, 13.9, 16.8, 19.7, 22.6, 25.5, 28.4, 31.3, 34.2, 37.1, 40.0, 42.9, 45.8, 48.7
 
-.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9
+d: 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9
 
 2.9
 \subsubsection{Pomiar 6}
@@ -152,9 +218,9 @@ $$
 $$
 f_0 = 6502 Hz \hspace{1cm} f=6410Hz
 $$
-(1.4, 4.0, 6.7, 9.4, 12.1, 14.7, 17.4, 20.0, 22.7, 25.4, 28.0, 30.7, 33.4, 36.0, 38.7, 41.3, 44.0, 46.7, 49.4)
+w: 1.4, 4.0, 6.7, 9.4, 12.1, 14.7, 17.4, 20.0, 22.7, 25.4, 28.0, 30.7, 33.4, 36.0, 38.7, 41.3, 44.0, 46.7, 49.4
 
-2.6 2.7 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.6 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.7
+d: 2.6 2.7 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.6 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.7
 
 2.666667
 \subsubsection{Pomiar 7}
@@ -164,9 +230,9 @@ $$
 $$
 f_0 = 6995 Hz \hspace{1cm} f=7143Hz
 $$
-(0.6, 3.2, 5.6, 8.0, 10.5, 13.0, 15.5, 18.0, 20.5, 22.9, 25.4, 27.9, 30.4, 32.8, 35.3, 37.8, 40.3, 42.7, 45.2, 47.7)
+w: 0.6, 3.2, 5.6, 8.0, 10.5, 13.0, 15.5, 18.0, 20.5, 22.9, 25.4, 27.9, 30.4, 32.8, 35.3, 37.8, 40.3, 42.7, 45.2, 47.7
 
-2.6 2.4 2.4 2.5 2.5 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5
+d: 2.6 2.4 2.4 2.5 2.5 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5
 
 2.478947
 \subsubsection{Pomiar 8}
@@ -176,9 +242,9 @@ $$
 $$
 f_0 = 7504 Hz \hspace{1cm} f=7576Hz
 $$
-(2.1, 4.4, 6.8, 9.1, 11.4, 13.7, 16.0, 18.3, 20.6, 22.9, 25.2, 27.6, 29.8, 32.2, 34.5, 36.8, 39.1, 41.4, 43.7, 46.0, 48.3)
+w: 2.1, 4.4, 6.8, 9.1, 11.4, 13.7, 16.0, 18.3, 20.6, 22.9, 25.2, 27.6, 29.8, 32.2, 34.5, 36.8, 39.1, 41.4, 43.7, 46.0, 48.3
 
-2.3 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.4 2.2 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3
+d: 2.3 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.4 2.2 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3
 
 2.31
 \subsubsection{Pomiar 9}
@@ -188,9 +254,8 @@ $$
 $$
 f_0 = 7988Hz \hspace{1cm} f=8065Hz
 $$
-(1.0, 3.2, 5.3, 7.6, 9.8, 11.9, 14.1, 16.3, 18.4, 20.6, 22.8, 25.0, 27.2, 29.3, 31.4, 33.6, 35.1, 37.9, 40.1, 42.3, 44.5, 46.6, 48.8)
-
-2.2 2.1 2.3 2.2 2.1 2.2 2.2 2.1 2.2 2.2 2.2 2.2 2.1 2.1 2.2 1.5 2.8 2.2 2.2 2.2 2.1 2.2
+w: 1.0, 3.2, 5.3, 7.6, 9.8, 11.9, 14.1, 16.3, 18.4, 20.6, 22.8, 25.0, 27.2, 29.3, 31.4, 33.6, 35.1, 37.9, 40.1, 42.3, 44.5, 46.6, 48.8
+d: 2.2 2.1 2.3 2.2 2.1 2.2 2.2 2.1 2.2 2.2 2.2 2.2 2.1 2.1 2.2 1.5 2.8 2.2 2.2 2.2 2.1 2.2
 
 
 2.172727
