@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.25)  25 MAR 2017 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.25)  25 MAR 2017 16:27
 entering extended mode
 **./sprawozdanie.tex
 (sprawozdanie.tex
@@ -1568,15 +1568,21 @@ Overfull \hbox (22.28734pt too wide) in paragraph at lines 366--379
  [][] 
  []
 
+
+Overfull \hbox (2.11609pt too wide) in paragraph at lines 383--384
+[]\OT4/cmr/m/n/12 Obliczamy bª¡d ±redni kwa-dra-towy ±red-niej aryt-me-tycz-nej
+ $\OML/plm/m/it/12 kappa$ \OT4/cmr/m/n/12 ze wzoru 
+ []
+
 [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (sprawozdanie.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 396.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
 Package rerunfilecheck Info: File `sprawozdanie.out' has not changed.
 (rerunfilecheck)             Checksum: 5CB7415FABF131161E74DAB2395BA2A2;1018.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
  34113 strings out of 493333
@@ -1603,7 +1609,7 @@ lr17.pfb><C:/Users/ivanr/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plr8.
 pfb><C:/Users/ivanr/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plsy10.pfb
 ><C:/Users/ivanr/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/ivanr/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on sprawozdanie.pdf (8 pages, 109618 bytes).
+Output written on sprawozdanie.pdf (8 pages, 109636 bytes).
 PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
