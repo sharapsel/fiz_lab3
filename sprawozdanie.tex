@@ -11,6 +11,7 @@
 \usepackage{longtable}
 \usepackage{gensymb}
 \usepackage{hyperref}
+\usepackage{multirow}
 
 
 \lstset{ %
@@ -74,7 +75,7 @@ Sprawozdanie z ćwiczenia laboratoryjnego nr 3.\\
 \end{titlepage}
 
 \section{Wstęp}
-Celem zadania jest wyznaczanie stosunku $c_p$ - ciepła właściwego pod stałym ciśnieniem do $c_v$ - ciepła właściwego w stałej obiętości dla powietrza. Stosunek ten oznaczamy w termodynamice przez $\kappa$ i nazywamy stałą adiabaty.
+Celem zadania jest wyznaczanie stosunku $c_p$ - ciepła właściwego pod stałym ciśnieniem do $c_v$ - ciepła właściwego w stałej objętości dla powietrza. Stosunek ten oznaczamy w termodynamice przez $\kappa$ i nazywamy stałą adiabaty.
 Drugim celem doświadczenia jest też wyznaczenie prędkości rozchodzenia się dźwięku w powietrzu.
 
 
@@ -82,24 +83,26 @@ Drugim celem doświadczenia jest też wyznaczenie prędkości rozchodzenia się 
 
 \subsection{Wstęp teoretyczny}
 Przyjęta konwencja jednostek:
-$$
-v - prędkość
-$$
-$$
-\rho - gęstość
-$$
-$$
-T - okres
-$$
-$$
-f - częstotliwość
-$$
-$$
-\bar{T} - temperatura
-$$
-$$
-k - stała Boltzmana
-$$
+\begin{center}
+
+\textit{v} - prędkość
+
+$\rho$ - gęstość
+
+
+\textit{T} - okres
+
+
+\textit{f} - częstotliwość
+
+
+$\bar{T}$ - temperatura
+
+
+\textit{k} - stała Boltzmana
+
+
+\end{center}
 
 
 
@@ -116,7 +119,7 @@ Fala dźwiękowa jest falą mechaniczną, więc potrzebuje do rozchodzenia się 
 W naszym przypadku źródłem tej fali (źródłem drgań) będzie głośnik, a bardziej precyzyjnie - drgania membrany głośnika. 
 
 Fala dźwiękowa jest falą podłużną. Rozchodzi się w powietrzu. Drgania cząsteczek powietrza (naszego ośrodka) objawiają się miejscowym nierównościami ilości cząsteczek na jednostkę objętości, co znaczy: miejscowymi nierównościami ciśnienia.
-Możemy przyjąć, że fala dźwiękowa rozchodzi się na tyle szybko, że te zmiany ciśnienia realizowane są w ramach przemiany adiabatycznej gazu (układ nie wymiania ciepła z otoczeniem), czyli spełnione jest: 
+Możemy przyjąć, że fala dźwiękowa rozchodzi się na tyle szybko, że te zmiany ciśnienia realizowane są w ramach przemiany adiabatycznej gazu (układ nie wymienia ciepła z otoczeniem), czyli spełnione jest: 
 
 $$
 pV^\kappa = const.
@@ -136,7 +139,7 @@ $$
 \subsection{Pomiary}
 Dokonaliśmy 9 pomiarów dla różnych częstotliwości. Na generatorze ustawialiśmy częstotliwość $f_0$. Generator nie jest jednak dokładny i żeby uzyskać dane do dalszych obliczeń - trzeba było zrobić coś innego. Na oscyloskopie zmierzyliśmy czas jednego pełnego okresu i stąd dostaliśmy prawdziwą częstotliwość. Częstotliwość na generatorze $f_0$ nie ma funkcji innej niż pokazanie, że wartość na generatorze jest obarczona dużym błędem. 
 
-Okres mierzyliśmy przy różnych skali. Błąds obserwatora w przypadku oscyloskopu to pół błędy wzorcowania.
+Okres mierzyliśmy przy różnych skali. Błąd obserwatora w przypadku oscyloskopu to pół błędy wzorcowania.
 
 Jest 9 pomiarów dla różnych częstotliwości, rozłożonych w przybliżeniu równomiernie od około 4kHz do około 8kHz. 
 Dla każdego z tych pomiarów wyznaczaliśmy wektor (oznaczmy go $w$) kolejnych punktów na linijce, gdy obserwujemy na oscyloskopie rezonans mechaniczny. Taki rezonans występuje co odległość $\frac{1}{2}\lambda$ (połowa długości fali). 
@@ -148,174 +151,246 @@ Liczymy średnią arymetryczną
 W pomiarze niepewności długości fali mamy błędy:
 \begin{enumerate}
 \item  typu A: odchylenie standardowe średniej, niepewność średniej $\frac{s_d}{\sqrt{|d|}}$, gdzie $s_d$ to odchylenie standardowe wektora d, a $|d|$ to jego liczność. 
-\item typu B: związana z niedokładnościami sprzętu pomiarowego. $$u_b = \sqrt{\frac{(\Delta x)^2}{3} + \frac{(\Delta x_E)^2}{3}}$$
+\item typu B: związana z niedokładnościami sprzętu pomiarowego. $$u_B(d) = \sqrt{\frac{(\Delta x)^2}{3} + \frac{(\Delta x_E)^2}{3}}$$
 U nas niepewność wzorcowania to długość jednej podziałki, czyli $0.1 cm$, a niepewność eksperymentatora to pół długości jednej podziałki, czyli $0.05 cm$.
-Zatem: $u_b = 0.0645497cm $
+Zatem: $u_B(d) = 0.0645497cm $
 \end{enumerate} 
+
+Niepewność typu B częstotliwości \textit{f} obliczamy ze wzoru $$\sqrt{\bigg(\frac{\partial \frac{1}{T}}{\partial T}\bigg)^2 U_B(T)^2} = \frac{1}{T^2} \sqrt{\frac{\Delta T^2}{3}+\frac{\Delta T_e^2}{3}}$$
 
 \subsubsection{Pomiar 1}
 $$
 T = 2.4*0.1ms \hspace{1cm} \Delta T = 0.2*0.1ms \hspace{1cm} \Delta T_e = 0.1*0.1ms 
 $$
 $$
-f_0 = 4023Hz \hspace{1cm} f=4167Hz
-$$
-w: 4.8, 9.0, 13.3, 17.5, 21.8, 26.0, 30.3, 34.5, 38.8, 43.0, 47.3
-
-d: 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3
-
-średnia: 4.25
-$$
-u_a = 0.016666667
+f_0 = 4023Hz \hspace{1cm} f=4166.7Hz \hspace{1cm} u_B(f)=0.2Hz
 $$
 
-$u_b = 0.0645497cm $
-$u_c = 0.06666667cm $
+w[cm]: 4.8, 9.0, 13.3, 17.5, 21.8, 26.0, 30.3, 34.5, 38.8, 43.0, 47.3
+
+d[cm]: 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3 4.2 4.3
+
+\begin{center}
+średnia: 4.25cm
+\end{center}
+$$
+u_A(d) = 0.016666667cm
+$$
+
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06666667cm $$
 \subsubsection{Pomiar 2}
 $$
-T = 4.4*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+T = 4.4*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.05ms 
 $$
 $$
-f_0 = 4503 Hz \hspace{1cm} f=4545Hz
+f_0 = 4503 Hz \hspace{1cm} f=4545.5Hz \hspace{1cm} u_B(f)=0.1Hz
 $$
-w: 0.3, 4.1, 8.0, 11.8, 15.6, 19.5, 23.3, 27.1, 31.0, 34.8, 38.6, 42.5, 46.3
 
-d: 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8
+w[cm]: 0.3, 4.1, 8.0, 11.8, 15.6, 19.5, 23.3, 27.1, 31.0, 34.8, 38.6, 42.5, 46.3
 
-średnia: 3.833333
+d[cm]: 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8 3.8 3.9 3.8
+
+\begin{center}
+średnia: 3.833333cm
+\end{center}
 
 $$
-u_a = 0.01421338
+u_A(d) = 0.01421338cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06609604cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06609604cm $$
 \subsubsection{Pomiar 3}
 $$
-T = 4.0*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+T = 4.0*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.05ms 
 $$
 $$
-f_0 = 4990 Hz \hspace{1cm} f=5000Hz
+f_0 = 4990 Hz \hspace{1cm} f=5000.0Hz \hspace{1cm} u_B(f)=0.2Hz
 $$
-w: 2.6, 6.0, 9.6, 13.0, 16.4, 19.8, 23.3, 26.7, 30.2, 33.6, 37.1, 40.6, 44.0, 47.5
 
-d: 3.4 3.6 3.4 3.4 3.4 3.5 3.4 3.5 3.4 3.5 3.5 3.4 3.5
+w[cm]: 2.6, 6.0, 9.6, 13.0, 16.4, 19.8, 23.3, 26.7, 30.2, 33.6, 37.1, 40.6, 44.0, 47.5
 
-średnia: 3.453846
+d[cm]: 3.4 3.6 3.4 3.4 3.4 3.5 3.4 3.5 3.4 3.5 3.5 3.4 3.5
+
+\begin{center}
+średnia: 3.453846cm
+\end{center}
 
 $$
-u_a = 0.01831135
+u_A(d) = 0.01831135cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06709674cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06709674cm $$
 \subsubsection{Pomiar 4}
 $$
-T = 3.6*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.5ms 
+T = 3.6*0.05ms \hspace{1cm} \Delta T = 0.2*0.05ms \hspace{1cm} \Delta T_e = 0.1*0.05ms 
 $$
 $$
-f_0 = 5497 Hz \hspace{1cm} f=5556Hz
+f_0 = 5497 Hz \hspace{1cm} f=5556.6Hz \hspace{1cm} u_B(f)=0.2
 $$
-w: 3.0, 6.1, 9.2, 12.4, 15.5, 18.7, 21.9, 25.0, 28.1, 31.3, 34.4, 37.6, 40.8, 43.9, 47.1
 
-d: 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.2
+w[cm]: 3.0, 6.1, 9.2, 12.4, 15.5, 18.7, 21.9, 25.0, 28.1, 31.3, 34.4, 37.6, 40.8, 43.9, 47.1
 
-średnia: 3.15
+d[cm]: 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.1 3.2 3.1 3.2 3.2 3.1 3.2
+
+\begin{center}
+średnia: 3.15cm
+\end{center}
 
 $$
-u_a = 0.0138675
+u_A(d) = 0.0138675cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06602253cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06602253cm $$
 \subsubsection{Pomiar 5}
 $$
-T = 3.4*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.2ms 
+T = 8.4*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
 $$
 $$
-f_0 = 5986 Hz \hspace{1cm} f=5952Hz
+f_0 = 5986 Hz \hspace{1cm} f=5952.4Hz \hspace{1cm} u_B(f)=0.1Hz
 $$
-w: 2.3, 5.2, 8.1, 11.0, 13.9, 16.8, 19.7, 22.6, 25.5, 28.4, 31.3, 34.2, 37.1, 40.0, 42.9, 45.8, 48.7
 
-d: 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9
+w[cm]: 2.3, 5.2, 8.1, 11.0, 13.9, 16.8, 19.7, 22.6, 25.5, 28.4, 31.3, 34.2, 37.1, 40.0, 42.9, 45.8, 48.7
 
-srednia: 2.9
+d[cm]: 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9 2.9
+
+\begin{center}
+średnia: 2.9cm
+\end{center}
 
 $$
-u_a = 0.00
+u_A(d) = 0.00cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06454972cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06454972cm $$
 \subsubsection{Pomiar 6}
 $$
-T = 7.8*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.2ms 
+T = 7.8*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
 $$
 $$
-f_0 = 6502 Hz \hspace{1cm} f=6410Hz
+f_0 = 6502 Hz \hspace{1cm} f=6410.3Hz \hspace{1cm} u_B(f)=0.1Hz
 $$
-w: 1.4, 4.0, 6.7, 9.4, 12.1, 14.7, 17.4, 20.0, 22.7, 25.4, 28.0, 30.7, 33.4, 36.0, 38.7, 41.3, 44.0, 46.7, 49.4
 
-d: 2.6 2.7 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.6 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.7
+w[cm]: 1.4, 4.0, 6.7, 9.4, 12.1, 14.7, 17.4, 20.0, 22.7, 25.4, 28.0, 30.7, 33.4, 36.0, 38.7, 41.3, 44.0, 46.7, 49.4
 
-średnia: 2.666667
+d[cm]: 2.6 2.7 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.6 2.7 2.7 2.6 2.7 2.6 2.7 2.7 2.7
+
+\begin{center}
+średnia: 2.666667cm
+\end{center}
 
 $$
-u_a = 0.01143324
+u_A(d) = 0.01143324cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06555445cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06555445cm $$
 \subsubsection{Pomiar 7}
 $$
 T = 7.0*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
 $$
 $$
-f_0 = 6995 Hz \hspace{1cm} f=7143Hz
+f_0 = 6995 Hz \hspace{1cm} f=7143.9Hz \hspace{1cm} u_B(f)=0.1Hz
 $$
-w: 0.6, 3.2, 5.6, 8.0, 10.5, 13.0, 15.5, 18.0, 20.5, 22.9, 25.4, 27.9, 30.4, 32.8, 35.3, 37.8, 40.3, 42.7, 45.2, 47.7
 
-d: 2.6 2.4 2.4 2.5 2.5 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5
+w[cm]: 0.6, 3.2, 5.6, 8.0, 10.5, 13.0, 15.5, 18.0, 20.5, 22.9, 25.4, 27.9, 30.4, 32.8, 35.3, 37.8, 40.3, 42.7, 45.2, 47.7
 
-średnia: 2.478947
+d[cm]: 2.6 2.4 2.4 2.5 2.5 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5 2.5 2.4 2.5 2.5
+
+\begin{center}
+średnia: 2.478947cm
+\end{center}
 
 $$
-u_a = 0.0122807
+u_A(d) = 0.0122807cm
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.06570755cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.06570755cm $$
 \subsubsection{Pomiar 8}
 $$
 T = 6.6*0.02ms \hspace{1cm} \Delta T = 0.2*0.02ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
 $$
 $$
-f_0 = 7504 Hz \hspace{1cm} f=7576Hz
+f_0 = 7504 Hz \hspace{1cm} f=7576.8Hz \hspace{1cm} u_B(f)=0.1Hz
 $$
-w: 2.1, 4.4, 6.8, 9.1, 11.4, 13.7, 16.0, 18.3, 20.6, 22.9, 25.2, 27.6, 29.8, 32.2, 34.5, 36.8, 39.1, 41.4, 43.7, 46.0, 48.3
 
-d: 2.3 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.4 2.2 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3
+w[cm]: 2.1, 4.4, 6.8, 9.1, 11.4, 13.7, 16.0, 18.3, 20.6, 22.9, 25.2, 27.6, 29.8, 32.2, 34.5, 36.8, 39.1, 41.4, 43.7, 46.0, 48.3
 
-srednia: 2.31
+d[cm]: 2.3 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.3 2.4 2.2 2.4 2.3 2.3 2.3 2.3 2.3 2.3 2.3
+
+\begin{center}
+srednia: 2.31cm
+\end{center}
 
 $$
-u_a = 0.01
+u_A(d) = 0.01cm
 $$
-$$u_b = 0.06454972cm $$
-$$u_c = 0.06531973cm $$
+$$u_B(d) = 0.06454972cm $$
+$$u_C(d) = 0.06531973cm $$
 \subsubsection{Pomiar 9}
 $$
 T = 6.2*0.02ms \hspace{1cm} \Delta T = 0.2*0.2ms \hspace{1cm} \Delta T_e = 0.1*0.02ms 
 $$
 $$
-f_0 = 7988Hz \hspace{1cm} f=8065Hz
+f_0 = 7988Hz \hspace{1cm} f=8065.5Hz \hspace{1cm} u_B(f)=0.2Hz
 $$
-w: 1.0, 3.2, 5.3, 7.6, 9.8, 11.9, 14.1, 16.3, 18.4, 20.6, 22.8, 25.0, 27.2, 29.3, 31.4, 33.6, 35.1, 37.9, 40.1, 42.3, 44.5, 46.6, 48.8
-d: 2.2 2.1 2.3 2.2 2.1 2.2 2.2 2.1 2.2 2.2 2.2 2.2 2.1 2.1 2.2 1.5 2.8 2.2 2.2 2.2 2.1 2.2
 
+w[cm]: 1.0, 3.2, 5.3, 7.6, 9.8, 11.9, 14.1, 16.3, 18.4, 20.6, 22.8, 25.0, 27.2, 29.3, 31.4, 33.6, 35.1, 37.9, 40.1, 42.3, 44.5, 46.6, 48.8
+
+d[cm]: 2.2 2.1 2.3 2.2 2.1 2.2 2.2 2.1 2.2 2.2 2.2 2.2 2.1 2.1 2.2 1.5 2.8 2.2 2.2 2.2 2.1 2.2
+
+\begin{center}
 
 średnia: 2.172727
+\end{center}
 
 $$
-u_a = 0.04422582
+u_A(d) = 0.04422582
 $$
-$u_b = 0.0645497cm $
-$$u_c = 0.07824698cm $$
+$$u_B(d) = 0.0645497cm $$
+$$u_C(d) = 0.07824698cm $$
+
+Pod koniec zmierzyliśmy temperaturę która wyniosła $21^\circ C = 294.15 K$
+\subsection{Wyliczenie $\frac{c_p}{c_v}$}
+
+Dla każdego z 9 pomiarów wyznaczamy $\kappa=\frac{c_p}{c_v}$ ze wzoru 
+$$
+\kappa = \frac{c_p}{c_v} = \frac{(2\bar{d})^2 f^2 M}{k\bar{T}}
+$$
+
+Zapiszemy wyniki wszystkich pomiarów do tablicy
+
+\begin{table}[H]
+\centering
+
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+Lp. & k{[}J/K{]} *$10^{-23}$       & M{[}Kg{]} *$10^{-26}$      & T{[}K{]}                & $f[s^{-1}]$ & $\Delta f[s^{-1}]$ & $\lambda[cm]$ & $\kappa$ \\ \hline
+1   & \multirow{9}{*}{1.3806} & \multirow{9}{*}{4.81} & \multirow{9}{*}{291.15} & 4167.7     & 0.2         & 9.5           & 1.49  \\ \cline{1-1} \cline{5-8} 
+2   &                         &                       &                         & 4545.5     & 0.1         & 7.66           & 1.44  \\ \cline{1-1} \cline{5-8} 
+3   &                         &                       &                         & 5000.0     & 0.2         & 6.90           & 1.41  \\ \cline{1-1} \cline{5-8} 
+4   &                         &                       &                         & 5556.6     & 0.2         & 6.30           & 1.45  \\ \cline{1-1} \cline{5-8} 
+5   &                         &                       &                         & 5952.4     & 0.1         & 5.80          & 1.41  \\ \cline{1-1} \cline{5-8} 
+6   &                         &                       &                         & 6410.3     & 0.1         & 5.34          & 1.38  \\ \cline{1-1} \cline{5-8} 
+7   &                         &                       &                         & 7143.9     & 0.1         & 4.94          & 1.49  \\ \cline{1-1} \cline{5-8} 
+8   &                         &                       &                         & 7576.8     & 0.1         & 4.62           & 1.45  \\ \cline{1-1} \cline{5-8} 
+9   &                         &                       &                         & 8065.5     & 0.2         & 4.34           & 1.45  \\ \hline
+\end{tabular}
+\caption{Wyniki pomiarów i obliczone $\kappa$}
+\end{table}
+Średnia wartość $\kappa$ wyniosła 1.4417
+Obliczamy błąd średni kwadratowy średniej arytmetycznej $kappa$ ze wzoru
+$$
+\Delta \kappa = \sqrt{\frac{\sum\limits_{i=1}^{n}{(\kappa-\kappa_i)^2}}{n(n-1)}} =  0.011
+$$
+
+Mamy 
+$$
+\kappa = 1.4417 \pm 0.011
+$$
 
 \section{Pomiar prędkości dźwięku w powietrzu.}
+
+
 
 \end{document}
